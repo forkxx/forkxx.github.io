@@ -398,6 +398,27 @@
   #lb .nv svg{width:20px;height:20px}
   #lb .ct{font-size:.74rem;color:var(--mute);margin-top:2px}
 
+
+  /* linha do tempo proporcional */
+  .gantt{overflow-x:auto;margin:6px 0 22px;border:1px solid var(--line);border-radius:16px;background:var(--card);padding:14px 18px 10px}
+  .gin{position:relative;min-width:640px;padding-top:24px}
+  .gyrs{position:absolute;left:0;right:0;top:0;height:20px}
+  .gyrs span{position:absolute;transform:translateX(-50%);font-family:var(--disp);font-size:.9rem;font-weight:700;letter-spacing:.08em;color:var(--mute)}
+  .gyrs span::after{content:"";position:absolute;left:50%;top:22px;height:400px;width:1px;background:var(--line);opacity:.6;pointer-events:none}
+  .grow{position:relative;height:46px}
+  .bar{position:absolute;top:6px;height:22px;border-radius:7px;display:flex;align-items:center;overflow:hidden;font-style:normal}
+  .bar.job{background:linear-gradient(135deg,#a24bff,#7a2fe0)}
+  .bar.on{background:linear-gradient(135deg,#2ee6a6,#1aa97a)}
+  .bar.dc{background:#5865f2}
+  .bar.yt{background:#ff0033}
+  .bar.wide{padding:0 12px;gap:8px;color:#fff;white-space:nowrap}
+  .bar.wide b{font-size:.8rem}.bar.wide small{font-size:.74rem;opacity:.9}
+  .glb{position:absolute;top:2px;display:flex;flex-direction:column;line-height:1.2;white-space:nowrap}
+  .glb.rt{align-items:flex-end}
+  .glb b{font-size:.84rem;font-weight:700}
+  .glb small{font-size:.72rem;color:var(--mute)}
+  .gy{display:none}
+
   /* 16 · capa do PDF */
   .cover{display:none}
 
@@ -723,6 +744,7 @@
 <section id="trajetoria" class="rv">
   <div class="eyebrow">Trajetória</div>
   <h2>Mais de uma década <span>no jornalismo de games</span></h2>
+  <div class="gantt" role="img" aria-label="Linha do tempo de 2011 a 2026 com cada trabalho em uma faixa proporcional ao tempo"><div class="gin"><div class="gyrs"><span style="left:3.23%">2012</span><span style="left:16.13%">2014</span><span style="left:29.03%">2016</span><span style="left:41.94%">2018</span><span style="left:54.84%">2020</span><span style="left:67.74%">2022</span><span style="left:80.65%">2024</span><span style="left:93.55%">2026</span></div><div class="grow"><i class="bar job" style="left:1.87%;width:13.74%"></i><div class="glb" style="left:16.61%"><b>Portal Versus</b><small>Out/2011 – Nov/2013</small></div></div><div class="grow"><i class="bar job" style="left:14.00%;width:21.23%"></i><div class="glb" style="left:36.23%"><b>Baixaki Jogos, TecMundo e Voxel</b><small>Set/2013 – Dez/2016</small></div></div><div class="grow"><i class="bar job" style="left:37.61%;width:7.03%"></i><div class="glb" style="left:45.65%"><b>The Enemy</b><small>Mai/2017 – Mai/2018</small></div></div><div class="grow"><i class="bar job" style="left:44.65%;width:4.52%"></i><div class="glb" style="left:50.16%"><b>Community manager de Call of Duty</b><small>Jun/2018 – Fev/2019</small></div></div><div class="grow"><i class="bar job" style="left:49.16%;width:22.06%"></i><div class="glb" style="left:72.23%"><b>Mais Esports</b><small>Fev/2019 – Jul/2022</small></div></div><div class="grow"><i class="bar on" style="left:92.77%;width:6.58%"></i><div class="glb rt" style="right:8.23%"><b>Onimaru Esports</b><small>Nov/2025 – hoje</small></div></div><div class="grow"><i class="bar dc wide" style="left:48.39%;width:50.97%"><b>Comunidade no Discord</b><small>Jan/2019 – hoje · 1.133 membros</small></i></div><div class="grow"><i class="bar yt wide" style="left:51.87%;width:47.48%"><b>Canal Forkxx no YouTube</b><small>Jul/2019 – hoje · 22,7 mil inscritos</small></i></div><div class="gy" style="left:92.77%"></div></div></div>
   <div class="tlnav noprint"><button type="button" id="tlp" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" id="tln" aria-label="Próximo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
   <ol class="tl" id="tl" tabindex="0" aria-label="Linha do tempo">
     <li><span class="tlicon"><span class="lg img" aria-hidden="true"><img src="assets/logos/versus.webp?v=3" alt="" loading="lazy"></span></span><div class="when">Out/2011 – Nov/2013</div><div class="what">Portal Versus</div><div class="where">Publicações no blog de games de luta.</div><a class="tllink" href="https://maximilianrox.wordpress.com/2018/07/24/portal-versus-publicacoes-e-reportagens/" target="_blank" rel="noopener">Ver no portfólio →</a></li>
