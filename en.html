@@ -14,16 +14,16 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Forkxx — Media Kit">
+<meta property="og:title" content="Forkxx - Media Kit">
 <meta property="og:description" content="Warcraft 3, Age of Empires, RTS and esports. A loyal, adult, Brazilian audience. 41.7K followers across 5 platforms and 1,133 Discord members.">
 <meta property="og:url" content="https://forkxx.github.io/en.html">
-<meta property="og:image" content="https://forkxx.github.io/assets/og.png">
+<meta property="og:image" content="https://forkxx.github.io/assets/og-en-v2.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Forkxx — Media Kit">
+<meta name="twitter:title" content="Forkxx - Media Kit">
 <meta name="twitter:description" content="Warcraft 3, Age of Empires, RTS and esports. A loyal, adult, Brazilian audience.">
-<meta name="twitter:image" content="https://forkxx.github.io/assets/og.png">
+<meta name="twitter:image" content="https://forkxx.github.io/assets/og-en-v2.png">
 <script>document.documentElement.classList.add('js');try{var _t=localStorage.getItem('fk-theme');if(_t==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,6 +67,7 @@
   .tagline{font-size:1.3rem;font-weight:600;margin:14px 0 6px}
   .loc{color:var(--mute);font-size:.95rem}
   .live{display:inline-flex;align-items:center;gap:9px;margin:0 0 16px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:.82rem;font-weight:600;color:var(--mute);max-width:100%}
+  .live[hidden]{display:none}
   .live .dot{width:9px;height:9px;border-radius:50%;background:#6b6b7a;flex:none}
   .live.on{color:#fff;border-color:rgba(255,70,70,.5);background:rgba(255,70,70,.12)}
   .live.on .dot{background:#ff4646;animation:lp 1.6s infinite}
@@ -79,6 +80,25 @@
   .latest h3{margin:0 0 8px;font-size:1.15rem;line-height:1.3}
   .latest .lm{font-size:.85rem;color:var(--mute)}
   @media(max-width:620px){.latest{grid-template-columns:minmax(0,1fr)}}
+  /* v3 */
+  .chip svg{width:14px;height:14px;margin:-2px 6px -2px 0;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  @property --ba{syntax:'<angle>';initial-value:0deg;inherits:false}
+  @keyframes ba{to{--ba:360deg}}
+  .latest,.card.hl{position:relative}
+  .latest::after,.card.hl::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:2px;background:conic-gradient(from var(--ba),transparent 0 62%,#a855f7 82%,#f3e8ff 92%,transparent 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s;pointer-events:none;animation:ba 3.6s linear infinite}
+  .latest::after,.card.hl:hover::after,.card.hl:focus-visible::after{opacity:1}
+  body{animation:pgin .4s ease both}
+  @keyframes pgin{from{opacity:0}to{opacity:1}}
+  body.out{opacity:0;transition:opacity .2s ease}
+  .navin{transition:padding .2s ease}
+  .nav.sm .navin{padding-top:4px;padding-bottom:4px}
+  .nav.sm .logo{font-size:1.15rem}
+  .logo{transition:font-size .2s ease}
+  @keyframes sk{to{background-position:-200% 0}}
+  img.thumb.bu:not(.ld),img.pthumb.bu:not(.ld){opacity:1;filter:none;transform:none;color:transparent;background:linear-gradient(100deg,#1b1b27 30%,#2c2c3e 50%,#1b1b27 70%) 0 0/200% 100%;animation:sk 1.2s linear infinite}
+  html[data-theme=light] img.thumb.bu:not(.ld),html[data-theme=light] img.pthumb.bu:not(.ld){background:linear-gradient(100deg,#e6e3f0 30%,#f4f2fa 50%,#e6e3f0 70%) 0 0/200% 100%}
+  @media(prefers-reduced-motion:reduce){.latest::after,.card.hl::after{animation:none}body{animation:none}img.thumb.bu:not(.ld),img.pthumb.bu:not(.ld){animation:none}}
+  @media print{.latest::after,.card.hl::after{display:none}body{animation:none}}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px}
   .chip{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.02)}
   .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--purple),var(--purple-2));color:#fff;font-weight:700;padding:13px 26px;border-radius:14px;box-shadow:0 10px 30px rgba(122,47,224,.4);transition:transform .15s,box-shadow .15s;border:0;cursor:pointer;font-family:inherit;font-size:1rem}
@@ -605,7 +625,7 @@
       <p class="tagline">Warcraft 3, Age of Empires, RTS and esports</p>
       <p class="loc">Curitiba, Brazil · Journalist and streamer</p>
       <div class="chips">
-        <span class="chip">RTS</span><span class="chip">Warcraft 3</span><span class="chip">Age of Empires</span><span class="chip">Esports</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><path d="M13 16.5h7M16.5 13v7"/></svg>RTS</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19l10-10M15 5l4-1-1 4M19 19L9 9M9 5L5 4l1 4M4 20l2-2M20 20l-2-2"/></svg>Warcraft 3</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8h3v2h2V8h6v2h2V8h3v12zM10 20v-5h4v5"/></svg>Age of Empires</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v6a4 4 0 0 1-8 0zM8 6H5v1a3 3 0 0 0 3 3M16 6h3v1a3 3 0 0 1-3 3M12 14v4M9 20h6"/></svg>Esports</span>
       </div>
       <a id="live" class="live noprint" href="https://www.twitch.tv/forkxx" target="_blank" rel="noopener" hidden><i class="dot"></i><span id="live-t"></span></a>
       <div class="actions">
@@ -1164,6 +1184,20 @@ fetch('assets/latest.json',{cache:'no-cache'}).then(function(r){return r.json()}
  a.href='https://www.youtube.com/watch?v='+j.id;document.getElementById('lv-i').src='https://i.ytimg.com/vi/'+j.id+'/hqdefault.jpg';
  document.getElementById('lv-t').textContent=j.title;
  document.getElementById('lv-d').textContent=(EN?'Published ':'Publicado ')+ago(j.published)+(EN?' · Watch on YouTube':' · Assistir no YouTube')}).catch(function(){})
+})();
+</script>
+<script>
+(function(){
+var nv=document.querySelector('.nav');
+if(nv){var f=function(){nv.classList.toggle('sm',window.scrollY>80)};window.addEventListener('scroll',f,{passive:true});f()}
+var ph=document.querySelector('.photo'),hr=document.querySelector('.hero');
+if(ph&&hr&&window.matchMedia('(hover:hover) and (pointer:fine)').matches&&!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+ hr.addEventListener('mousemove',function(e){var r=hr.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;ph.style.translate=(x*-14).toFixed(1)+'px '+(y*-10).toFixed(1)+'px'});
+ hr.addEventListener('mouseleave',function(){ph.style.translate='0 0'});
+ ph.style.transition='translate .25s ease-out'}
+document.querySelectorAll('.lang a:not(.on)').forEach(function(a){a.addEventListener('click',function(e){
+ if(e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;e.preventDefault();document.body.classList.add('out');var h=a.href;setTimeout(function(){location.href=h},200)})});
+window.addEventListener('pageshow',function(){document.body.classList.remove('out')});
 })();
 </script>
 </body>
