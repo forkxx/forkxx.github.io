@@ -419,6 +419,31 @@
   .glb small{font-size:.72rem;color:var(--mute)}
   .gy{display:none}
 
+  /* linha do tempo em uma linha */
+  .tl{position:relative;display:grid;grid-template-columns:repeat(8,1fr);gap:0;overflow:visible;scroll-snap-type:none;padding:0;margin:14px 0 8px}
+  .tl::before{content:"";position:absolute;left:6%;right:6%;top:25px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--purple),#2ee6a6)}
+  .tl li{flex:none;background:none;border:0;border-radius:0;padding:0 8px;text-align:center;align-items:center;position:relative;scroll-snap-align:none}
+  .tl li.now{border:0}
+  .tl .tlicon{justify-content:center;margin:0 0 10px;position:relative;z-index:1;padding:0 6px;background:var(--bg);border-radius:14px}
+  html .tl .tlicon .lg{box-shadow:0 0 0 3px var(--bg)}
+  .tl .tlicon .lg.s{width:26px;height:26px;border-radius:8px}
+  .tl li.now .tlicon .lg{box-shadow:0 0 0 3px var(--bg),0 0 0 5px #2ee6a6}
+  .tl .when{font-size:.86rem;letter-spacing:.08em}
+  .tl .what{font-size:.86rem;font-weight:700;line-height:1.2}
+  .tl .tllink{margin-top:4px;padding-top:0;font-size:.74rem}
+  .tl .where{display:none;position:absolute;left:50%;top:100%;transform:translateX(-50%);width:210px;z-index:5;background:var(--card);border:1px solid var(--purple);border-radius:12px;padding:10px 12px;font-size:.78rem;text-align:left;box-shadow:0 12px 30px rgba(0,0,0,.4);margin-top:-6px}
+  .tl li:hover .where,.tl li:focus-within .where{display:block}
+  .tl li:nth-child(1) .where{left:0;transform:none}
+  .tl li:nth-child(8) .where{left:auto;right:0;transform:none}
+  @media (max-width:820px){
+    .tl{display:block;margin-left:6px;padding-left:0}
+    .tl::before{left:21px;right:auto;top:6px;bottom:6px;width:3px;height:auto;background:linear-gradient(180deg,var(--purple),#2ee6a6)}
+    .tl li{padding:0 0 22px 66px;text-align:left;min-height:48px;align-items:flex-start}
+    .tl .tlicon{position:absolute;left:0;top:0;margin:0;padding:0;background:none;flex-direction:column}
+    .tl .where{display:block;position:static;transform:none;width:auto;background:none;border:0;padding:0;box-shadow:none;margin:2px 0 0;font-size:.84rem}
+    .tl .tllink{font-size:.8rem}
+  }
+
   /* 16 · capa do PDF */
   .cover{display:none}
 
@@ -744,8 +769,6 @@
 <section id="trajetoria" class="rv">
   <div class="eyebrow">Career</div>
   <h2>Over a decade <span>in games journalism</span></h2>
-  <div class="gantt" role="img" aria-label="Timeline from 2011 to 2026 with each job as a time-proportional bar"><div class="gin"><div class="gyrs"><span style="left:3.23%">2012</span><span style="left:16.13%">2014</span><span style="left:29.03%">2016</span><span style="left:41.94%">2018</span><span style="left:54.84%">2020</span><span style="left:67.74%">2022</span><span style="left:80.65%">2024</span><span style="left:93.55%">2026</span></div><div class="grow"><i class="bar job" style="left:1.87%;width:13.74%"></i><div class="glb" style="left:16.61%"><b>Portal Versus</b><small>Oct/2011 – Nov/2013</small></div></div><div class="grow"><i class="bar job" style="left:14.00%;width:21.23%"></i><div class="glb" style="left:36.23%"><b>Baixaki Jogos, TecMundo e Voxel</b><small>Sep/2013 – Dec/2016</small></div></div><div class="grow"><i class="bar job" style="left:37.61%;width:7.03%"></i><div class="glb" style="left:45.65%"><b>The Enemy</b><small>May/2017 – May/2018</small></div></div><div class="grow"><i class="bar job" style="left:44.65%;width:4.52%"></i><div class="glb" style="left:50.16%"><b>Call of Duty community manager</b><small>Jun/2018 – Feb/2019</small></div></div><div class="grow"><i class="bar job" style="left:49.16%;width:22.06%"></i><div class="glb" style="left:72.23%"><b>Mais Esports</b><small>Feb/2019 – Jul/2022</small></div></div><div class="grow"><i class="bar on" style="left:92.77%;width:6.58%"></i><div class="glb rt" style="right:8.23%"><b>Onimaru Esports</b><small>Nov/2025 – present</small></div></div><div class="grow"><i class="bar dc wide" style="left:48.39%;width:50.97%"><b>Discord community</b><small>Jan/2019 – today · 1,133 members</small></i></div><div class="grow"><i class="bar yt wide" style="left:51.87%;width:47.48%"><b>Forkxx YouTube channel</b><small>Jul/2019 – today · 22.7K subscribers</small></i></div><div class="gy" style="left:92.77%"></div></div></div>
-  <div class="tlnav noprint"><button type="button" id="tlp" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" id="tln" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
   <ol class="tl" id="tl" tabindex="0" aria-label="Timeline">
     <li><span class="tlicon"><span class="lg img" aria-hidden="true"><img src="assets/logos/versus.webp?v=3" alt="" loading="lazy"></span></span><div class="when">Oct/2011 – Nov/2013</div><div class="what">Portal Versus</div><div class="where">Posts on a fighting-games blog.</div><a class="tllink" href="https://maximilianrox.wordpress.com/2018/07/24/portal-versus-publicacoes-e-reportagens/" target="_blank" rel="noopener">View in portfolio →</a></li>
     <li><span class="tlicon"><span class="lg img s" aria-hidden="true"><img src="assets/logos/baixaki.webp?v=3" alt="" loading="lazy"></span><span class="lg img s" aria-hidden="true"><img src="assets/logos/tecmundo.webp?v=3" alt="" loading="lazy"></span><span class="lg img s" aria-hidden="true"><img src="assets/logos/voxel.webp?v=3" alt="" loading="lazy"></span></span><div class="when">Sep/2013 – Dec/2016</div><div class="what">Baixaki Jogos, TecMundo Games and Voxel</div><div class="where">Main work and reporting.</div><a class="tllink" href="https://maximilianrox.wordpress.com/2018/08/12/voxel-baixaki-jogos-publicacoes-e-reportagens/" target="_blank" rel="noopener">View in portfolio →</a></li>
@@ -905,10 +928,6 @@
   }
 
   /* timeline */
-  var tl=document.getElementById('tl');
-  function tlGo(d){ tl.scrollBy({left:d*(tl.querySelector('li').offsetWidth+14),behavior:reduce?'auto':'smooth'}); }
-  document.getElementById('tlp').addEventListener('click',function(){tlGo(-1)});
-  document.getElementById('tln').addEventListener('click',function(){tlGo(1)});
 
   /* blur-up */
   document.querySelectorAll('img[loading="lazy"],.thumb img,.pthumb img').forEach(function(im){
