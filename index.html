@@ -7,6 +7,9 @@
 <meta name="description" content="Media kit do Forkxx: criador de conteúdo e streamer de Warcraft 3, Age of Empires, RTS e esports. Audiência brasileira, adulta e fiel no YouTube, Twitch, Instagram, TikTok e Discord.">
 <meta name="theme-color" content="#0b0b10">
 <link rel="canonical" href="https://forkxx.github.io/">
+<link rel="alternate" hreflang="pt-BR" href="https://forkxx.github.io/">
+<link rel="alternate" hreflang="en" href="https://forkxx.github.io/en.html">
+<link rel="alternate" hreflang="x-default" href="https://forkxx.github.io/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -217,6 +220,29 @@
   .alt .t{font-weight:600}.alt .s{font-size:.84rem;color:var(--mute)}
   footer{color:var(--mute);font-size:.78rem;text-align:center;padding:40px 0 40px;line-height:1.7}
 
+  .ico{width:16px;height:16px;flex:none;vertical-align:-2px;margin-right:7px}
+  .c-youtube{color:#ff3d3d}.c-twitch{color:#a970ff}.c-instagram{color:#e0489f}.c-tiktok{color:#2ee6d6}.c-x{color:#fff}.c-discord{color:#7b86ff}
+  .yt .ico{color:#ff3d3d}.tw .ico{color:#a970ff}.ig .ico{color:#e0489f}.tt .ico{color:#2ee6d6}.xx .ico{color:#fff}.dc .ico{color:#7b86ff}
+  .plat .name{display:flex;align-items:center}
+  .plat .name .ico{width:18px;height:18px}
+  .h3i{display:flex;align-items:center}.h3i .ico{width:20px;height:20px;margin-right:9px}
+  .hl .plat-tag{display:flex;align-items:center}
+  .socials{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+  .soc{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--card);border:1px solid var(--line);transition:transform .15s,border-color .15s}
+  .soc:hover{transform:translateY(-2px);border-color:currentColor}
+  .soc .ico{width:20px;height:20px;margin:0}
+  .lang{display:flex;gap:4px;margin-left:auto}
+  .links+.lang{margin-left:0}
+  .lang a{display:flex;align-items:center;gap:6px;padding:5px 9px;border-radius:99px;font-size:.78rem;font-weight:700;color:var(--mute);border:1px solid transparent}
+  .lang a.on{color:var(--text);border-color:var(--line);background:rgba(255,255,255,.05)}
+  .lang a:hover{color:var(--text)}
+  .flag{width:20px;height:14px;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.15)}
+  .cardact{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
+  .cardact .lnk{font-size:.84rem;color:var(--purple);font-weight:600}
+  a.hl .cardact{margin-top:10px}
+  .embed:empty{display:none}
+  .embed iframe{width:100%;height:575px;border:0;border-radius:12px;margin-top:12px;background:#000}
+  .hl.v .cardact{margin-left:6px}
   /* REVEAL */
   .js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
   .js .rv.in{opacity:1;transform:none}
@@ -237,7 +263,9 @@
     .mapwrap{grid-template-columns:1fr}
     .navin{flex-wrap:wrap;row-gap:6px}
     .links{order:3;width:100%;margin:0;overflow-x:auto;white-space:nowrap;padding-bottom:2px;scrollbar-width:none}
-    .btn.sm{margin-left:auto}
+    .lang{margin-left:auto}.links+.lang{margin-left:auto}
+    .btn.sm{margin-left:0}
+    .navin{gap:10px}
   }
   @media print{
     @page{margin:0}
@@ -263,6 +291,7 @@
     <div class="links">
       <a href="#alcance">Alcance</a><a href="#numeros">Números</a><a href="#audiencia">Audiência</a><a href="#conteudo">Conteúdo</a><a href="#trajetoria">Trajetória</a><a href="#parcerias">Parcerias</a>
     </div>
+    <div class="lang" role="group" aria-label="Idioma / Language"><a class="on" href="index.html" hreflang="pt-BR" lang="pt-BR" aria-label="Português" aria-current="true"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#229e45"/><path d="M14 3l11 7-11 7L3 10z" fill="#f8d22f"/><circle cx="14" cy="10" r="4.3" fill="#2a3a8f"/></svg><span>PT</span></a><a href="en.html" hreflang="en" lang="en" aria-label="English"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#fff"/><rect y="0.00" width="28" height="2.86" fill="#d22f3d"/><rect y="5.71" width="28" height="2.86" fill="#d22f3d"/><rect y="11.43" width="28" height="2.86" fill="#d22f3d"/><rect y="17.14" width="28" height="2.86" fill="#d22f3d"/><rect width="13" height="10.8" rx="1" fill="#2a3a8f"/></svg><span>EN</span></a></div>
     <a class="btn sm" href="#contato">Falar comigo</a>
   </div>
 </nav>
@@ -289,6 +318,7 @@
         </a>
         <a class="btn ghost noprint" href="https://www.youtube.com/forkxx" target="_blank" rel="noopener">Ver o canal</a>
       </div>
+      <div class="socials noprint"><a class="soc c-youtube" href="https://www.youtube.com/forkxx" target="_blank" rel="noopener" aria-label="YouTube"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a class="soc c-twitch" href="https://www.twitch.tv/forkxx" target="_blank" rel="noopener" aria-label="Twitch"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg></a><a class="soc c-instagram" href="https://www.instagram.com/forkxx_" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a><a class="soc c-tiktok" href="https://www.tiktok.com/@forkxx" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a class="soc c-x" href="https://x.com/Forkxx" target="_blank" rel="noopener" aria-label="X"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></a><a class="soc c-discord" href="https://discord.com/invite/3xGx8WyRva" target="_blank" rel="noopener" aria-label="Discord"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg></a></div>
     </div>
   </div>
 </header>
@@ -307,24 +337,24 @@
   <div class="total"><b><span class="count" data-to="41.7" data-dec="1" data-suffix=" mil">41,7 mil</span></b><span>seguidores somados em 5 plataformas</span></div>
   <div class="grid g5">
     <a class="card plat yt" href="https://www.youtube.com/forkxx" target="_blank" rel="noopener">
-      <div class="name"><span class="dot"></span>YouTube</div><div class="num"><span class="count" data-to="22.7" data-dec="1" data-suffix=" mil">22,7 mil</span></div><div class="sub">inscritos</div>
+      <div class="name"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</div><div class="num"><span class="count" data-to="22.7" data-dec="1" data-suffix=" mil">22,7 mil</span></div><div class="sub">inscritos</div>
     </a>
     <a class="card plat tw" href="https://www.twitch.tv/forkxx" target="_blank" rel="noopener">
-      <div class="name"><span class="dot"></span>Twitch</div><div class="num"><span class="count" data-to="11.2" data-dec="1" data-suffix=" mil">11,2 mil</span></div><div class="sub">seguidores</div>
+      <div class="name"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>Twitch</div><div class="num"><span class="count" data-to="11.2" data-dec="1" data-suffix=" mil">11,2 mil</span></div><div class="sub">seguidores</div>
     </a>
     <a class="card plat ig" href="https://www.instagram.com/forkxx_" target="_blank" rel="noopener">
-      <div class="name"><span class="dot"></span>Instagram</div><div class="num"><span class="count" data-to="4.2" data-dec="1" data-suffix=" mil">4,2 mil</span></div><div class="sub">seguidores</div>
+      <div class="name"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>Instagram</div><div class="num"><span class="count" data-to="4.2" data-dec="1" data-suffix=" mil">4,2 mil</span></div><div class="sub">seguidores</div>
     </a>
     <a class="card plat tt" href="https://www.tiktok.com/@forkxx" target="_blank" rel="noopener">
-      <div class="name"><span class="dot"></span>TikTok</div><div class="num"><span class="count" data-to="967" data-dec="0" data-suffix="">967</span></div><div class="sub">seguidores · 46,2 mil curtidas</div>
+      <div class="name"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok</div><div class="num"><span class="count" data-to="967" data-dec="0" data-suffix="">967</span></div><div class="sub">seguidores · 46,2 mil curtidas</div>
     </a>
     <a class="card plat xx" href="https://x.com/Forkxx" target="_blank" rel="noopener">
-      <div class="name"><span class="dot"></span>X</div><div class="num"><span class="count" data-to="2.6" data-dec="1" data-suffix=" mil">2,6 mil</span></div><div class="sub">seguidores</div>
+      <div class="name"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>X</div><div class="num"><span class="count" data-to="2.6" data-dec="1" data-suffix=" mil">2,6 mil</span></div><div class="sub">seguidores</div>
     </a>
   </div>
   <a class="card community plat dc" href="https://discord.com/invite/3xGx8WyRva" target="_blank" rel="noopener">
     <div>
-      <div class="name"><span class="dot"></span>Comunidade no Discord</div>
+      <div class="name"><svg class="ico " viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>Comunidade no Discord</div>
       <div class="num"><span class="count" data-to="1133" data-dec="0" data-suffix=" membros">1.133 membros</span></div>
       <p>Servidor da comunidade do Forkxx: bate-papo sobre RTS, avisos de live e eventos.</p>
     </div>
@@ -354,7 +384,7 @@
   <h2>Números que <span>importam</span></h2>
   <div class="grid g2">
     <div class="card">
-      <h3>YouTube</h3>
+      <h3 class="h3i"><svg class="ico c-youtube" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</h3>
       <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Painel oficial · YouTube Studio · 28 dias · 24/11/2026</span>
       <div class="kpis">
         <div class="kpi"><b><span class="count" data-to="106.9" data-dec="1" data-suffix=" mil">106,9 mil</span></b><span>visualizações</span></div>
@@ -364,7 +394,7 @@
       </div>
     </div>
     <div class="card">
-      <h3>Twitch</h3>
+      <h3 class="h3i"><svg class="ico c-twitch" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>Twitch</h3>
       <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Painel oficial · Twitch Analytics · 30 dias · 24/11/2026</span>
       <div class="kpis">
         <div class="kpi"><b><span class="count" data-to="3369" data-dec="0" data-suffix="">3.369</span></b><span>espectadores únicos</span></div>
@@ -374,7 +404,7 @@
       </div>
     </div>
     <div class="card">
-      <h3>Instagram</h3>
+      <h3 class="h3i"><svg class="ico c-instagram" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>Instagram</h3>
       <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Painel profissional · 30 dias · 24/11/2026</span>
       <div class="kpis">
         <div class="kpi"><b>940 mil</b><span>visualizações no período *</span></div>
@@ -385,7 +415,7 @@
       <p class="note">* O período inclui um post viral (pico em um único dia). Fora do pico, o patamar diário é bem menor.</p>
     </div>
     <div class="card">
-      <h3>TikTok</h3>
+      <h3 class="h3i"><svg class="ico c-tiktok" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok</h3>
       <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Painel oficial · TikTok Analytics · 365 dias · 24/11/2026</span>
       <div class="kpis">
         <div class="kpi"><b><span class="count" data-to="133.5" data-dec="1" data-suffix=" mil">133,5 mil</span></b><span>visualizações de vídeos</span></div>
@@ -419,7 +449,7 @@
   <h2>Quem <span>assiste</span></h2>
   <div class="grid g2">
     <div class="card">
-      <h3>YouTube</h3>
+      <h3 class="h3i"><svg class="ico c-youtube" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</h3>
       <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Visualizações · 28 dias</span>
       <div class="bars-title" style="margin-top:16px">Idade</div>
       <div class="donutrow">
@@ -443,7 +473,7 @@
       </div>
     </div>
     <div class="card">
-      <h3>Instagram</h3>
+      <h3 class="h3i"><svg class="ico c-instagram" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>Instagram</h3>
       <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Seguidores · 30 dias</span>
       <div class="bars-title" style="margin-top:16px">Idade</div>
       <div class="donutrow">
@@ -488,19 +518,19 @@
   <div class="grid g3">
     <a class="card hl v" href="https://www.youtube.com/watch?v=d_moIQ3Y9vs" target="_blank" rel="noopener">
       <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/d_moIQ3Y9vs/hqdefault.jpg" alt="Miniatura do vídeo de Age of Mythology Retold">
-      <div class="plat-tag">YouTube</div><div class="title">Age of Mythology Retold: Titãs no 1v1? Tunison vs. DIVINE (Ranked)</div><div class="views">43,7 mil<small>views</small></div>
+      <div class="plat-tag"><svg class="ico c-youtube" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</div><div class="title">Age of Mythology Retold: Titãs no 1v1? Tunison vs. DIVINE (Ranked)</div><div class="views">43,7 mil<small>views</small></div>
     </a>
     <a class="card hl v" href="https://www.youtube.com/watch?v=yjYfGZq5NR8" target="_blank" rel="noopener">
       <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/yjYfGZq5NR8/hqdefault.jpg" alt="Miniatura do vídeo de Dota 1">
-      <div class="plat-tag">YouTube</div><div class="title">Dota 1: BRTT espancou de Morphling! paiN no DotA raiz</div><div class="views">22,1 mil<small>views</small></div>
+      <div class="plat-tag"><svg class="ico c-youtube" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</div><div class="title">Dota 1: BRTT espancou de Morphling! paiN no DotA raiz</div><div class="views">22,1 mil<small>views</small></div>
     </a>
     <a class="card hl v" href="https://www.youtube.com/watch?v=UZgphRACkSw" target="_blank" rel="noopener">
       <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/UZgphRACkSw/hqdefault.jpg" alt="Miniatura do vídeo da final de Warcraft 3 Reforged">
-      <div class="plat-tag">YouTube</div><div class="title">Warcraft 3 Reforged: A final! Dendi vs. Ahmpy (WC3 OnlyFangs Invitational)</div><div class="views">22,0 mil<small>views</small></div>
+      <div class="plat-tag"><svg class="ico c-youtube" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</div><div class="title">Warcraft 3 Reforged: A final! Dendi vs. Ahmpy (WC3 OnlyFangs Invitational)</div><div class="views">22,0 mil<small>views</small></div>
     </a>
-    <div class="card hl lift"><div class="plat-tag">TikTok</div><div class="title">Alanzoka no Warcraft 3?</div><div class="views">258,4 mil<small>views</small></div></div>
-    <div class="card hl lift"><div class="plat-tag">TikTok</div><div class="title">Chineses criaram Warcraft 3 mobile</div><div class="views">242,4 mil<small>views</small></div></div>
-    <div class="card hl lift"><div class="plat-tag">Instagram</div><div class="title">O ano é 2006 e você entrou em uma LAN house</div><div class="views">1,4 mi<small>views</small></div></div>
+    <div class="card hl lift"><div class="plat-tag"><svg class="ico c-tiktok" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok</div><div class="title">Alanzoka no Warcraft 3?</div><div class="views">258,4 mil<small>views</small></div><div class="embed" data-tt="7395287958124907781"></div><div class="cardact noprint"><button type="button" class="btn sm ghost play">▶ Assistir aqui</button><a class="lnk" href="https://www.tiktok.com/@forkxx/video/7395287958124907781" target="_blank" rel="noopener">Abrir no TikTok ↗</a></div></div>
+    <div class="card hl lift"><div class="plat-tag"><svg class="ico c-tiktok" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok</div><div class="title">Chineses criaram Warcraft 3 mobile</div><div class="views">242,4 mil<small>views</small></div><div class="embed" data-tt="7528539165047180550"></div><div class="cardact noprint"><button type="button" class="btn sm ghost play">▶ Assistir aqui</button><a class="lnk" href="https://www.tiktok.com/@forkxx/video/7528539165047180550" target="_blank" rel="noopener">Abrir no TikTok ↗</a></div></div>
+    <a class="card hl" href="https://www.instagram.com/reel/DGRTLpAOscP/" target="_blank" rel="noopener"><div class="plat-tag"><svg class="ico c-instagram" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>Instagram</div><div class="title">O ano é 2006 e você entrou em uma LAN house</div><div class="views">1,4 mi<small>views</small></div><div class="cardact noprint"><span class="lnk">Ver no Instagram ↗</span></div></a>
   </div>
   <p class="note">Views dos vídeos do YouTube desde a publicação.</p>
 </section>
@@ -548,7 +578,7 @@
     <details><summary>Que tipo de marca e de jogo combina com o canal?</summary><p>Jogos de estratégia e RTS, lançamentos, patches e DLCs, periféricos, hardware, plataformas de venda de chaves e organizadores de campeonatos. O público é adulto e brasileiro.</p></details>
     <details><summary>Qual o prazo de uma ação?</summary><p>Depende do formato e do tamanho da campanha. O prazo é combinado na proposta.</p></details>
     <details><summary>Você compartilha os resultados depois?</summary><p>Sim, posso compartilhar os números do painel da ação (visualizações, retenção e cliques), conforme combinado antes de começar.</p></details>
-    <details><summary>Em que idioma é o conteúdo?</summary><p>Português do Brasil.</p></details>
+    <details><summary>Em que idioma é o conteúdo?</summary><p>Português do Brasil. Conteúdo em inglês é negociável e combinado na proposta.</p></details>
   </div>
 </section>
 
@@ -589,8 +619,10 @@
 
 <script>
 (function(){
+  var TXT = {embedTitle:'Vídeo do TikTok'};
+  var LOC = document.documentElement.lang || 'pt-BR';
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var fmt = function(v,d){return v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})};
+  var fmt = function(v,d){return v.toLocaleString(LOC,{minimumFractionDigits:d,maximumFractionDigits:d})};
 
   var rv = document.querySelectorAll('.rv');
   if(!('IntersectionObserver' in window) || reduce){
@@ -630,6 +662,18 @@
     });
   });
   lb.addEventListener('click',function(e){ if(e.target===lb) lb.close(); });
+
+
+  document.querySelectorAll('.embed').forEach(function(box){
+    var card = box.closest('.card'), btn = card.querySelector('.play');
+    if(!btn) return;
+    btn.addEventListener('click',function(){
+      var f = document.createElement('iframe');
+      f.src = 'https://www.tiktok.com/embed/v2/'+box.dataset.tt;
+      f.loading = 'lazy'; f.allow = 'fullscreen; encrypted-media'; f.title = TXT.embedTitle;
+      box.appendChild(f); btn.style.display = 'none';
+    });
+  });
 
   var user = 'max_lp_rox', host = 'hotmail.com', addr = user+'@'+host;
   var mailCard = document.querySelector('[data-mail]');
