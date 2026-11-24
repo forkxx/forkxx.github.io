@@ -101,6 +101,15 @@
   html[data-theme=light] img.thumb.bu:not(.ld),html[data-theme=light] img.pthumb.bu:not(.ld){background:linear-gradient(100deg,#e6e3f0 30%,#f4f2fa 50%,#e6e3f0 70%) 0 0/200% 100%}
   @media(prefers-reduced-motion:reduce){.latest::after,.card.hl::after{animation:none}body{animation:none}img.thumb.bu:not(.ld),img.pthumb.bu:not(.ld){animation:none}}
   @media print{.latest::after,.card.hl::after{display:none}body{animation:none}}
+  .pcontact{display:none}
+  @media print{
+    .pcontact{display:block;margin-top:6px}
+    .pcontact .pc-i{color:var(--mute);margin:0 0 14px}
+    .pcontact ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+    .pcontact li{display:flex;gap:12px;align-items:baseline;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+    .pcontact b{min-width:74px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--purple-2,#a855f7)}
+    .pcontact a{color:var(--text);font-weight:600;overflow-wrap:anywhere}
+  }
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px}
   .chip{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.02)}
   .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--purple),var(--purple-2));color:#fff;font-weight:700;padding:13px 26px;border-radius:14px;box-shadow:0 10px 30px rgba(122,47,224,.4);transition:transform .15s,box-shadow .15s;border:0;cursor:pointer;font-family:inherit;font-size:1rem}
@@ -932,13 +941,26 @@
 <section id="contato" class="rv">
   <div class="eyebrow">Contato</div>
   <h2>Vamos <span>conversar?</span></h2>
-  <p class="lead">Conte um pouco do que você pretende divulgar e o que tem em mente. O botão abre o seu e-mail já com o briefing preenchido.</p>
-  <div class="chan">
+  <p class="lead noprint">Conte um pouco do que você pretende divulgar e o que tem em mente. O botão abre o seu e-mail já com o briefing preenchido.</p>
+  <div class="chan noprint">
     <a class="chb" data-mail href="https://linktr.ee/forkxx" aria-label="E-mail" title="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></a>
     <a class="chb" href="https://linktr.ee/forkxx" target="_blank" rel="noopener" aria-label="Linktree" title="Linktree"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z"/></svg></a>
     <a class="chb c-discord" href="https://discord.com/invite/3xGx8WyRva" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg></a>
   </div>
-  <form class="brief" id="brief" novalidate>
+  <div class="pcontact">
+    <p class="pc-i">Para propostas e parcerias, fale comigo por e-mail ou por qualquer canal abaixo.</p>
+    <ul>
+      <li><b>E-mail</b><a id="pc-mail" href="#"></a></li>
+      <li><b>YouTube</b><a href="https://www.youtube.com/forkxx">youtube.com/forkxx</a></li>
+      <li><b>Twitch</b><a href="https://www.twitch.tv/forkxx">twitch.tv/forkxx</a></li>
+      <li><b>Instagram</b><a href="https://www.instagram.com/forkxx_">instagram.com/forkxx_</a></li>
+      <li><b>TikTok</b><a href="https://www.tiktok.com/@forkxx">tiktok.com/@forkxx</a></li>
+      <li><b>X</b><a href="https://x.com/Forkxx">x.com/Forkxx</a></li>
+      <li><b>Discord</b><a href="https://discord.com/invite/3xGx8WyRva">discord.com/invite/3xGx8WyRva</a></li>
+      <li><b>Linktree</b><a href="https://linktr.ee/forkxx">linktr.ee/forkxx</a></li>
+    </ul>
+  </div>
+  <form class="brief noprint" id="brief" novalidate>
         <div class="field"><label for="f-marca">Marca ou empresa</label><input id="f-marca" name="marca" type="text" autocomplete="organization"></div>
         <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" type="text" autocomplete="name"></div>
         <div class="field full"><label for="f-formato">Formato de interesse</label>
@@ -1149,6 +1171,7 @@
   var user = 'max_lp_rox', host = 'hotmail.com', addr = user+'@'+host;
   var mailCard = document.querySelector('[data-mail]');
   if(mailCard){ mailCard.href = 'mailto:'+addr; }
+  var pcm=document.getElementById('pc-mail'); if(pcm){ pcm.href='mailto:'+addr; pcm.textContent=addr; }
 
   var form = document.getElementById('brief'), hint = document.getElementById('f-hint');
   form.addEventListener('submit',function(ev){
