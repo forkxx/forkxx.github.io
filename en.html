@@ -105,8 +105,8 @@
   @media print{
     .pcontact{display:block;margin-top:6px}
     .pcontact .pc-i{color:var(--mute);margin:0 0 14px}
-    .pcontact ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
-    .pcontact li{display:flex;gap:12px;align-items:baseline;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+    .pcontact ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+    .pcontact li{display:flex;gap:10px;align-items:baseline;padding:6px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
     .pcontact b{min-width:74px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--purple-2,#a855f7)}
     .pcontact a{color:var(--text);font-weight:600;overflow-wrap:anywhere}
   }
@@ -351,7 +351,7 @@
     .hero{padding:10px 0}
     .gal{grid-template-columns:repeat(5,1fr)}
     details>p{display:block!important}
-    footer{padding:16px 0}
+    footer,footer.wrap{padding:6px 0 4px!important;margin:0;gap:4px}
   }
 
   /* 7 · tema claro */
@@ -574,7 +574,11 @@
     .marq{overflow:visible;-webkit-mask-image:none;mask-image:none}
     .mtrack{animation:none;flex-wrap:wrap;width:auto}
     .strip .row .mtrack span.o[aria-hidden]{display:none}
-    #contato{break-inside:avoid;break-before:page}
+    #contato{break-inside:avoid;padding-top:10px}
+    details{padding:10px 16px!important}
+    details summary{font-size:.9rem;min-height:28px}
+    section#parcerias{padding-bottom:0}
+    .strip .row span.o.slot{display:none!important}
     .tl{flex-wrap:wrap;overflow:visible}
     .tl li{flex:1 1 30%}
     .tilt{transform:none!important}
