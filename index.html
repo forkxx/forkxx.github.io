@@ -81,7 +81,9 @@
   .latest .lm{font-size:.85rem;color:var(--mute)}
   @media(max-width:620px){.latest{grid-template-columns:minmax(0,1fr)}}
   /* v3 */
-  .chip svg{width:14px;height:14px;margin:-2px 6px -2px 0;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .chip{display:inline-flex;align-items:center}
+  html:not([data-theme=light]) .chip img[src*="ic-rts"]{filter:brightness(1.8)}
+  .chip img.ci{width:20px;height:20px;margin:-3px 8px -3px -4px;flex:none;object-fit:contain}
   @property --ba{syntax:'<angle>';initial-value:0deg;inherits:false}
   @keyframes ba{to{--ba:360deg}}
   .latest,.card.hl{position:relative}
@@ -625,7 +627,7 @@
       <p class="tagline">Warcraft 3, Age of Empires, RTS e esports</p>
       <p class="loc">Curitiba, PR · Jornalista e streamer</p>
       <div class="chips">
-        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><path d="M13 16.5h7M16.5 13v7"/></svg>RTS</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19l10-10M15 5l4-1-1 4M19 19L9 9M9 5L5 4l1 4M4 20l2-2M20 20l-2-2"/></svg>Warcraft 3</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8h3v2h2V8h6v2h2V8h3v12zM10 20v-5h4v5"/></svg>Age of Empires</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v6a4 4 0 0 1-8 0zM8 6H5v1a3 3 0 0 0 3 3M16 6h3v1a3 3 0 0 1-3 3M12 14v4M9 20h6"/></svg>Esports</span>
+        <span class="chip"><img class="ci" src="assets/ic-rts.webp" alt="" width="20" height="20">RTS</span><span class="chip"><img class="ci" src="assets/ic-wc3.webp" alt="" width="20" height="20">Warcraft 3</span><span class="chip"><img class="ci" src="assets/ic-aoe.webp" alt="" width="20" height="20">Age of Empires</span><span class="chip"><img class="ci" src="assets/ic-esports.webp" alt="" width="20" height="20">Esports</span>
       </div>
       <a id="live" class="live noprint" href="https://www.twitch.tv/forkxx" target="_blank" rel="noopener" hidden><i class="dot"></i><span id="live-t"></span></a>
       <div class="actions">
