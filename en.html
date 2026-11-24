@@ -74,11 +74,6 @@
   .live span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   @keyframes lp{0%{box-shadow:0 0 0 0 rgba(255,70,70,.6)}100%{box-shadow:0 0 0 9px rgba(255,70,70,0)}}
   html[data-theme=light] .live.on{color:#111}
-  .latest{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:18px;align-items:center;margin:0 0 16px}
-  .latest .thumb{margin:0}
-  .latest .lt{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--purple-2,#a855f7);font-weight:700;margin:0 0 6px}
-  .latest h3{margin:0 0 8px;font-size:1.15rem;line-height:1.3}
-  .latest .lm{font-size:.85rem;color:var(--mute)}
   @media(max-width:620px){.latest{grid-template-columns:minmax(0,1fr)}}
   /* v3 */
   .chip{display:inline-flex;align-items:center}
@@ -86,9 +81,6 @@
   .chip img.ci{width:20px;height:20px;margin:-3px 8px -3px -4px;flex:none;object-fit:contain}
   @property --ba{syntax:'<angle>';initial-value:0deg;inherits:false}
   @keyframes ba{to{--ba:360deg}}
-  .latest,.card.hl{position:relative}
-  .latest::after,.card.hl::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:2px;background:conic-gradient(from var(--ba),transparent 0 62%,#a855f7 82%,#f3e8ff 92%,transparent 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s;pointer-events:none;animation:ba 3.6s linear infinite}
-  .latest::after,.card.hl:hover::after,.card.hl:focus-visible::after{opacity:1}
   body{animation:pgin .4s ease both}
   @keyframes pgin{from{opacity:0}to{opacity:1}}
   body.out{opacity:0;transition:opacity .2s ease}
@@ -110,19 +102,6 @@
     .pcontact b{min-width:74px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--purple-2,#a855f7)}
     .pcontact a{color:var(--text);font-weight:600;overflow-wrap:anywhere}
   }
-  .act{display:flex;flex-direction:column;gap:10px;min-width:0}
-  .act .tag{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--purple)}
-  .act .fac{position:relative;display:block;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#1b1b27;border:1px solid var(--line);cursor:pointer;padding:0;font-family:inherit;color:inherit}
-  .act .fac img{width:100%;height:100%;object-fit:cover;display:block}
-  .act .fac .pl{position:absolute;inset:0;display:grid;place-items:center}
-  .act .fac .pl i{width:54px;height:54px;border-radius:50%;background:rgba(122,47,224,.92);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45)}
-  .act .fac .pl i::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
-  .act .fac.soc{aspect-ratio:auto;min-height:150px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18px;font-weight:600}
-  .act .fac.soc small{display:block;font-weight:400;color:var(--mute);margin-top:6px}
-  .act iframe{width:100%;border:0;border-radius:12px;background:#000;display:block}
-  .act h3{margin:0;font-size:1rem;line-height:1.35}
-  .act .am{font-size:.82rem;color:var(--mute)}
-  .act .am a{color:var(--purple);font-weight:600}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px}
   .chip{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.02)}
   .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--purple),var(--purple-2));color:#fff;font-weight:700;padding:13px 26px;border-radius:14px;box-shadow:0 10px 30px rgba(122,47,224,.4);transition:transform .15s,box-shadow .15s;border:0;cursor:pointer;font-family:inherit;font-size:1rem}
@@ -879,10 +858,6 @@
 <section id="conteudo" class="rv">
   <div class="eyebrow">Content</div>
   <h2>Videos that <span>reached the most</span></h2>
-  <a id="lv" class="card hl latest noprint" href="https://www.youtube.com/watch?v=IW-HpLqaxD4" target="_blank" rel="noopener">
-    <img class="thumb" id="lv-i" loading="lazy" src="https://i.ytimg.com/vi/IW-HpLqaxD4/hqdefault.jpg" alt="Thumbnail of the channel's latest video">
-    <div><p class="lt">Latest video</p><h3 id="lv-t">LICHGATE TOWER SURVIVOR: GAMEPLAY BATENDO RECORDES! O mapa do Warcraft 3 no Steam!</h3><p class="lm" id="lv-d">Watch on YouTube</p></div>
-  </a>
   <div class="grid g3">
     <a class="card hl v" href="https://www.youtube.com/watch?v=d_moIQ3Y9vs" target="_blank" rel="noopener">
       <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/d_moIQ3Y9vs/hqdefault.jpg" alt="Thumbnail of the Age of Mythology Retold video">
@@ -918,15 +893,6 @@
     <li class="now"><span class="tlicon"><span class="lg img" aria-hidden="true"><img src="assets/logos/onimaru.webp?v=3" alt="" loading="lazy"></span></span><div class="when">Nov/2025 – present</div><div class="what">Onimaru Esports e Forkxx</div><div class="where">Content producer at Onimaru Esports since 11/17/2025, and RTS content creator on YouTube and Twitch.</div></li>
   </ol>
   <p class="linkrow"><a href="https://maximilianrox.wordpress.com" target="_blank" rel="noopener">View reporting portfolio →</a></p>
-</section>
-
-<div class="dv" aria-hidden="true"><i></i><b></b><i></i></div>
-<section id="atividade" class="rv noprint">
-  <div class="eyebrow">Latest activity</div>
-  <h2>What just <span>came out</span></h2>
-  <p class="lead">The latest videos and posts, straight from the socials. Tap to load each one.</p>
-  <div class="grid g3" id="act-yt"></div>
-  <div class="grid g3" id="act-soc" style="margin-top:14px"></div>
 </section>
 
 <div class="dv" aria-hidden="true"><i></i><b></b><i></i></div>
@@ -1225,16 +1191,6 @@ function lv(){var el=document.getElementById('live');if(!el)return;
    el.classList.add('on');tx.textContent=(EN?'LIVE now: ':'AO VIVO agora: ')+ti.trim().slice(0,70);el.hidden=false}).catch(function(){el.classList.add('on');tx.textContent=EN?'LIVE now on Twitch':'AO VIVO agora na Twitch';el.hidden=false})
  }).catch(function(){el.hidden=true})}
 lv();setInterval(lv,120000);
-function ago(d){var m=Math.max(1,Math.round((Date.now()-new Date(d))/60000));
- if(m<60)return EN?m+' min ago':'há '+m+' min';var h=Math.round(m/60);
- if(h<24)return EN?h+(h>1?' hours':' hour')+' ago':'há '+h+(h>1?' horas':' hora');
- var dd=Math.round(h/24);if(dd<30)return EN?dd+(dd>1?' days':' day')+' ago':'há '+dd+(dd>1?' dias':' dia');
- var mo=Math.round(dd/30);return EN?mo+(mo>1?' months':' month')+' ago':'há '+mo+(mo>1?' meses':' mês')}
-fetch('assets/latest.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){
- if(!j||!j.id)return;var a=document.getElementById('lv');
- a.href='https://www.youtube.com/watch?v='+j.id;document.getElementById('lv-i').src='https://i.ytimg.com/vi/'+j.id+'/hqdefault.jpg';
- document.getElementById('lv-t').textContent=j.title;
- document.getElementById('lv-d').textContent=(EN?'Published ':'Publicado ')+ago(j.published)+(EN?' · Watch on YouTube':' · Assistir no YouTube')}).catch(function(){})
 })();
 </script>
 <script>
@@ -1249,38 +1205,6 @@ if(ph&&hr&&window.matchMedia('(hover:hover) and (pointer:fine)').matches&&!windo
 document.querySelectorAll('.lang a:not(.on)').forEach(function(a){a.addEventListener('click',function(e){
  if(e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;e.preventDefault();document.body.classList.add('out');var h=a.href;setTimeout(function(){location.href=h},200)})});
 window.addEventListener('pageshow',function(){document.body.classList.remove('out')});
-})();
-</script>
-<script>
-(function(){
-var EN=document.documentElement.lang.slice(0,2)=='en';
-function ago(d){var m=Math.max(1,Math.round((Date.now()-new Date(d))/60000));
- if(m<60)return EN?m+' min ago':'há '+m+' min';var h=Math.round(m/60);
- if(h<24)return EN?h+(h>1?' hours':' hour')+' ago':'há '+h+(h>1?' horas':' hora');
- var dd=Math.round(h/24);if(dd<30)return EN?dd+(dd>1?' days':' day')+' ago':'há '+dd+(dd>1?' dias':' dia');
- var mo=Math.round(dd/30);return EN?mo+(mo>1?' months':' month')+' ago':'há '+mo+(mo>1?' meses':' mês')}
-function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
-function card(tag){var c=el('div','card act');c.appendChild(el('div','tag',tag));return c}
-function ifr(src,h,t){var f=document.createElement('iframe');f.src=src;f.height=h;f.loading='lazy';f.title=t;f.allow='autoplay; fullscreen; encrypted-media; picture-in-picture';f.allowFullscreen=true;return f}
-function yt(v){var c=card('YouTube');var b=el('button','fac');b.type='button';b.setAttribute('aria-label',(EN?'Play: ':'Reproduzir: ')+v.title);
- var im=document.createElement('img');im.src='https://i.ytimg.com/vi/'+v.id+'/mqdefault.jpg';im.alt='';im.loading='lazy';b.appendChild(im);var pl=el('span','pl');pl.appendChild(el('i'));b.appendChild(pl);
- b.addEventListener('click',function(){var f=ifr('https://www.youtube-nocookie.com/embed/'+v.id+'?autoplay=1&rel=0','100%',v.title);f.style.aspectRatio='16/9';f.removeAttribute('height');c.replaceChild(f,b)});
- c.appendChild(b);c.appendChild(el('h3',null,v.title));
- var m=el('div','am',(EN?'Published ':'Publicado ')+ago(v.published)+' · ');var a=el('a',null,EN?'Open on YouTube':'Abrir no YouTube');a.href='https://www.youtube.com/watch?v='+v.id;a.target='_blank';a.rel='noopener';m.appendChild(a);c.appendChild(m);return c}
-function soc(name,url,src,h,label){var c=card(name);var b=el('button','fac soc');b.type='button';
- b.appendChild(document.createTextNode(label));var sm=el('small',null,EN?'Tap to load':'Toque para carregar');b.appendChild(sm);
- b.addEventListener('click',function(){c.replaceChild(ifr(src,h,name),b)});c.appendChild(b);
- var m=el('div','am');var a=el('a',null,EN?'Open on '+name:'Abrir no '+name);a.href=url;a.target='_blank';a.rel='noopener';m.appendChild(a);c.appendChild(m);return c}
-var sec=document.getElementById('atividade');if(!sec)return;
-fetch('assets/latest.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){
- var vs=(j.videos&&j.videos.length?j.videos:[{id:j.id,title:j.title,published:j.published}]).slice(0,3);
- var box=document.getElementById('act-yt');vs.forEach(function(v){if(v&&v.id)box.appendChild(yt(v))})}).catch(function(){});
-fetch('assets/social.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){
- var box=document.getElementById('act-soc'),n=0,m;
- if(j.instagram&&(m=j.instagram.match(/instagram\.com\/(p|reel|tv)\/([\w-]+)/))){box.appendChild(soc('Instagram',j.instagram,'https://www.instagram.com/'+m[1]+'/'+m[2]+'/embed/captioned/',620,EN?'Latest Instagram post':'Último post do Instagram'));n++}
- if(j.x&&(m=j.x.match(/status\/(\d+)/))){box.appendChild(soc('X',j.x,'https://platform.twitter.com/embed/Tweet.html?dnt=true&theme=dark&id='+m[1],460,EN?'Latest post on X':'Último post no X'));n++}
- if(j.tiktok&&(m=j.tiktok.match(/video\/(\d+)/))){box.appendChild(soc('TikTok',j.tiktok,'https://www.tiktok.com/embed/v2/'+m[1],575,EN?'Latest TikTok':'Último TikTok'));n++}
- if(!n)box.style.display='none'}).catch(function(){document.getElementById('act-soc').style.display='none'})
 })();
 </script>
 </body>
