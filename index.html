@@ -66,6 +66,19 @@
   .realname{color:var(--mute);font-size:1rem;margin-top:2px}
   .tagline{font-size:1.3rem;font-weight:600;margin:14px 0 6px}
   .loc{color:var(--mute);font-size:.95rem}
+  .live{display:inline-flex;align-items:center;gap:9px;margin:0 0 16px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:.82rem;font-weight:600;color:var(--mute);max-width:100%}
+  .live .dot{width:9px;height:9px;border-radius:50%;background:#6b6b7a;flex:none}
+  .live.on{color:#fff;border-color:rgba(255,70,70,.5);background:rgba(255,70,70,.12)}
+  .live.on .dot{background:#ff4646;animation:lp 1.6s infinite}
+  .live span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  @keyframes lp{0%{box-shadow:0 0 0 0 rgba(255,70,70,.6)}100%{box-shadow:0 0 0 9px rgba(255,70,70,0)}}
+  html[data-theme=light] .live.on{color:#111}
+  .latest{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:18px;align-items:center;margin:0 0 16px}
+  .latest .thumb{margin:0}
+  .latest .lt{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--purple-2,#a855f7);font-weight:700;margin:0 0 6px}
+  .latest h3{margin:0 0 8px;font-size:1.15rem;line-height:1.3}
+  .latest .lm{font-size:.85rem;color:var(--mute)}
+  @media(max-width:620px){.latest{grid-template-columns:minmax(0,1fr)}}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px}
   .chip{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.02)}
   .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--purple),var(--purple-2));color:#fff;font-weight:700;padding:13px 26px;border-radius:14px;box-shadow:0 10px 30px rgba(122,47,224,.4);transition:transform .15s,box-shadow .15s;border:0;cursor:pointer;font-family:inherit;font-size:1rem}
@@ -594,6 +607,7 @@
       <div class="chips">
         <span class="chip">RTS</span><span class="chip">Warcraft 3</span><span class="chip">Age of Empires</span><span class="chip">Esports</span>
       </div>
+      <a id="live" class="live noprint" href="https://www.twitch.tv/forkxx" target="_blank" rel="noopener" hidden><i class="dot"></i><span id="live-t"></span></a>
       <div class="actions">
         <a class="btn" href="#contato">FALE COMIGO</a>
         <a class="btn ghost noprint" href="assets/forkxx-mediakit.pdf" download>
@@ -817,6 +831,10 @@
 <section id="conteudo" class="rv">
   <div class="eyebrow">Conteúdo</div>
   <h2>Vídeos que <span>mais alcançaram</span></h2>
+  <a id="lv" class="card hl latest noprint" href="https://www.youtube.com/watch?v=IW-HpLqaxD4" target="_blank" rel="noopener">
+    <img class="thumb" id="lv-i" loading="lazy" src="https://i.ytimg.com/vi/IW-HpLqaxD4/hqdefault.jpg" alt="Miniatura do vídeo mais recente do canal">
+    <div><p class="lt">Último vídeo</p><h3 id="lv-t">LICHGATE TOWER SURVIVOR: GAMEPLAY BATENDO RECORDES! O mapa do Warcraft 3 no Steam!</h3><p class="lm" id="lv-d">Assistir no YouTube</p></div>
+  </a>
   <div class="grid g3">
     <a class="card hl v" href="https://www.youtube.com/watch?v=d_moIQ3Y9vs" target="_blank" rel="noopener">
       <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/d_moIQ3Y9vs/hqdefault.jpg" alt="Miniatura do vídeo de Age of Mythology Retold">
@@ -1122,6 +1140,30 @@
     window.location.href = 'mailto:'+addr+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     hint.textContent = 'Se o seu e-mail não abriu, escreva para '+addr+'.';
   });
+})();
+</script>
+<script>
+(function(){
+var EN=document.documentElement.lang.slice(0,2)=='en';
+function lv(){var el=document.getElementById('live');if(!el)return;
+ fetch('https://decapi.me/twitch/uptime/forkxx').then(function(r){return r.text()}).then(function(t){
+  t=t.trim();var tx=document.getElementById('live-t');
+  if(/offline/i.test(t)){el.classList.remove('on');tx.textContent=EN?'Twitch: offline right now':'Twitch: offline agora';el.hidden=false;return}
+  if(/error|not found|unavailable/i.test(t)||!t){el.hidden=true;return}
+  fetch('https://decapi.me/twitch/title/forkxx').then(function(r){return r.text()}).then(function(ti){
+   el.classList.add('on');tx.textContent=(EN?'LIVE now: ':'AO VIVO agora: ')+ti.trim().slice(0,70);el.hidden=false}).catch(function(){el.classList.add('on');tx.textContent=EN?'LIVE now on Twitch':'AO VIVO agora na Twitch';el.hidden=false})
+ }).catch(function(){el.hidden=true})}
+lv();setInterval(lv,120000);
+function ago(d){var m=Math.max(1,Math.round((Date.now()-new Date(d))/60000));
+ if(m<60)return EN?m+' min ago':'há '+m+' min';var h=Math.round(m/60);
+ if(h<24)return EN?h+(h>1?' hours':' hour')+' ago':'há '+h+(h>1?' horas':' hora');
+ var dd=Math.round(h/24);if(dd<30)return EN?dd+(dd>1?' days':' day')+' ago':'há '+dd+(dd>1?' dias':' dia');
+ var mo=Math.round(dd/30);return EN?mo+(mo>1?' months':' month')+' ago':'há '+mo+(mo>1?' meses':' mês')}
+fetch('assets/latest.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){
+ if(!j||!j.id)return;var a=document.getElementById('lv');
+ a.href='https://www.youtube.com/watch?v='+j.id;document.getElementById('lv-i').src='https://i.ytimg.com/vi/'+j.id+'/hqdefault.jpg';
+ document.getElementById('lv-t').textContent=j.title;
+ document.getElementById('lv-d').textContent=(EN?'Published ':'Publicado ')+ago(j.published)+(EN?' · Watch on YouTube':' · Assistir no YouTube')}).catch(function(){})
 })();
 </script>
 </body>
